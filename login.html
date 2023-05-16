@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vote Now</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+    <center class="slide-in">
+        <img src="images/logo.png"  height="120"/>
+        <h1>Login</h1>
+        <form>
+            <input type="text" id="username" placeholder="Email/ID No."/>
+            <br>
+            <br>
+            <input type="password" id="password" placeholder="Password"/>
+            <br>
+            <br>
+            <div id="loader"></div>
+            <label id="feedback"></label>
+            <br>
+            <button type="button" class="button" onclick="login()">Login</button>
+            <br>
+            <br>
+            <label>Not yet registered? Register <a href="register.html">here</a></label>
+        </form>
+    </center>
+
+    <script>
+        // Show the loader
+        function showLoader() {
+            document.getElementById("loader").style.display = "block";
+        }
+
+        // Hide the loader
+        function hideLoader() {
+            document.getElementById("loader").style.display = "none";
+        }
+
+        function login(){
+            showLoader();
+
+            let user = document.getElementById("username").value;
+            let password = document.getElementById("password").value;
+            let xhttp = new XMLHttpRequest();
+
+            console.log("user: " + user);
+            console.log("password: " + password);
+
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    // Typical action to be performed when the document is ready:
+                    
+                }
+            };
+
+            var jsonString = '{"user": "' + user + '", "password": "' + password + '"}';
+            var jsonObject = JSON.parse(jsonString);
+
+            
+            xhttp.open("post", "js/login.js", true);
+            xhttp.setRequestHeader('Content-type', 'application/json')
+            xhttp.send(jsonObject);
+        }
+    </script>
+</body>
+</html>
+
