@@ -4,12 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vote Now</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
 </head>
 <body>
+<style>
+    .graph {
+        width: 400px;
+        height: 300px;
+        border: 1px solid #ccc;
+        margin: 0 auto;
+      }
+  
+      .bar {
+        background-color: #007bff;
+        width: 20px;
+        margin-right: 10px;
+        display: inline-block;
+        vertical-align: bottom;
+      }
+  
+      .bar-label {
+        text-align: center;
+        margin-top: 5px;
+      }
+    </style>
+    <!-- Navbar -->
+    <ul class="navbar">
+        <li><a href="#home"><img src="../images/logo.png" height="30"/></a></li>
+        
+        <li><a href="#about">Dashboard</a></li>
+        <li>
+          <a href="#contact">User Email</a>
+          <ul class="dropdown">
+            <li><a href="#option1">Log Out</a></li>
+          </ul>
+        </li>
+      </ul>
+    <!-- Navbar -->
     <!-- The sidebar -->
     <div class="sidebar">
         <a class="active" href="#home">
@@ -43,7 +77,18 @@
     
     <!-- Page content -->
     <div class="content">
-        ..
+        <div class="graph">
+            <div class="bar" style="height: 150px;"></div>
+            <div class="bar" style="height: 120px;"></div>
+            <div class="bar" style="height: 200px;"></div>
+            <div class="bar" style="height: 80px;"></div>
+            <div class="bar" style="height: 250px;"></div>
+          </div>
+          <div class="bar-label">A</div>
+          <div class="bar-label">B</div>
+          <div class="bar-label">C</div>
+          <div class="bar-label">D</div>
+          <div class="bar-label">E</div>
     </div>
 
     

@@ -1,5 +1,5 @@
 .button {
-    background-color: rgb(95, 140, 228); /* Set the background color */
+    background-color: rgb(172, 188, 201);; /* Set the background color */
     border: none; /* Remove the border */
     color: white; /* Set the text color */
     padding: 10px 20px; /* Add some padding */
@@ -14,7 +14,7 @@
   }
   
   .button:hover {
-    background-color:  rgb(162, 205, 255); /* Change the background color on hover */
+    background-color: rgb(162, 205, 255); /* Change the background color on hover */
     color: black;
   }
   
@@ -43,7 +43,7 @@
   }
 
   .header {
-    background-image: url("../images/BG.jpg");
+    background-image: url("../images/header-bg.png");
     background-size: cover;
     background-position: center;
     height: 80vh; /* Adjust the height as needed */
@@ -51,6 +51,14 @@
     color: #fff; /* Set the text color for better visibility */
     padding: 20px;
     position: relative;
+  }
+
+  #illustration{
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      animation: bounce 3s infinite;
   }
 
   .stick-to-bottom {
@@ -191,13 +199,13 @@
 
 /* Active/current link */
 .sidebar a.active {
-  background-color: #272be6;
+  background-color: rgb(49, 140, 228);
   color: white;
 }
 
 /* Links on mouse-over */
 .sidebar a:hover:not(.active) {
-  background-color: #0f06b736;
+  background-color: rgb(28, 103, 173);
   color: white;
 }
 
@@ -206,6 +214,91 @@ div.content {
   margin-left: 200px;
   padding: 1px 16px;
   height: 1000px;
+}
+
+ul.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: rgb(49, 140, 228);
+}
+
+ul.navbar li {
+  float: left;
+}
+
+ul.navbar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.navbar li a:hover {
+  background-color: rgb(28, 103, 173);
+}
+
+ul.navbar li ul.dropdown {
+  display: none;
+  position: absolute;
+  background-color: rgb(28, 103, 173);
+  margin-left: -3%;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+ul.navbar li:hover ul.dropdown {
+  display: block;
+}
+
+ul.navbar li ul.dropdown li {
+  display: block;
+}
+
+ul.navbar li ul.dropdown li a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+ul.navbar li ul.dropdown li a:hover {
+  background-color: rgb(49, 140, 228);
+}
+
+ul.navbar li:last-child {
+  float: right;
+}
+
+#loginFrom{
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.3);
+  width: 80%;
+  border-radius: 5%;
+  padding-bottom: 5%;
+  padding-top: 5%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+#regForm{
+  box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.3);
+  width: 70%;
+  border-radius: 5%;
+  padding-bottom: 1%;
+  padding-top: 1%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.body{
+  background-image: url("https://thumbs.dreamstime.com/b/wooden-checkmark-voting-elections-gray-background-presidency-parliamentary-elections-referendum-survey-wooden-147416182.jpg");
+  background-repeat: no-repeat;
+  background-size: 100dvw 100dvh;
+  padding-top: 3%;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  background-position: center center;
 }
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
@@ -227,14 +320,22 @@ div.content {
   }
 }
   
-  @keyframes slideIn {
-    0% {
-      transform: translateY(100%);
-      opacity: 0;
-    }
-    100% {
-      transform: translateY(0);
-      opacity: 1;
-    }
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
   }
-  
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translate(-50%, -50%) translateY(0);
+  }
+  50% {
+    transform: translate(-50%, -50%) translateY(-20px);
+  }
+}

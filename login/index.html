@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vote Now</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
 </head>
-<body>
-    <center class="slide-in">
-        <img src="images/logo.png"  height="120"/>
+<body class="body">
+    <center class="slide-in" id="loginFrom">
+        <img src="../images/logo.png"  height="120"/>
         <h1>Login</h1>
         <form>
             <input type="text" id="username" placeholder="Email/ID No."/>
@@ -23,7 +23,7 @@
             <button type="button" class="button" onclick="login()">Login</button>
             <br>
             <br>
-            <label>Not yet registered? Register <a href="register.html">here</a></label>
+            <label>Not yet registered? Register <a href="../register/" style="color: rgb(172, 188, 201)">here</a></label>
         </form>
     </center>
 
@@ -59,7 +59,7 @@
             var jsonObject = JSON.parse(jsonString);
 
             
-            xhttp.open("post", "js/login.js", true);
+            xhttp.open("post", "../js/login.js", true);
             xhttp.setRequestHeader('Content-type', 'application/json')
             xhttp.send(jsonObject);
         }
